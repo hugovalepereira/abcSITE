@@ -38,21 +38,32 @@ var s = function(sketch){
     sketch.scale(25, 25);
 
     sketch.a.plant();
-    if (sketch.a.cau.length<13)sketch.a.grow();
+
+    if (sketch.a.cau.length<13) {
+      sketch.a.grow();
+    }
+
     sketch.b.plant();
-    if (sketch.b.cau.length<13)sketch.b.grow();
+    if (sketch.b.cau.length<13) {
+      sketch.b.grow();
+    }
+
     sketch.c.plant();
-    if (sketch.c.cau.length<8)sketch.c.grow();
+    if (sketch.c.cau.length<8){
+      sketch.c.grow();
+    }
 
 
     if (sketch.a.cau.length>=14) {
 
       sketch.noLoop();
+      alert('sexo');
+      sketch.$('#main').append("<p>AGRICULTURA<br>BIOLÓGICA<br>COIMBRA</p>");
     }
 
   };
 
-  sketch.windowResized= function() {
+  sketch.windowResized = function() {
     sketch.resizeCanvas(window.innerWidth, window.innerHeight);
   }
 
