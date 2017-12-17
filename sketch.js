@@ -2,10 +2,11 @@
 
 var s = function(sketch){
 
-  var d;
-  var a, b,c;
 
-  var f;
+  var a, b, c;
+  var corA, corB, corC;
+
+
 
   var comp=1000;
 
@@ -13,35 +14,47 @@ var s = function(sketch){
 
     sketch.createCanvas(window.innerWidth,window.innerHeight);
 
-    sketch.f =sketch.color(255, 200, 0);
-    sketch.d= new DNA('a');
-    sketch.a= new Planta(sketch.round((sketch.width/2)/25), sketch.round((sketch.height/2)/25), 0, -1, sketch.d, sketch.f);
-    sketch.b= new Planta(sketch.round((sketch.width/2)/25+5), sketch.round((sketch.height/2)/25-3), 1, 0, new DNA('b'), sketch.color(200, 0, 255));
-    sketch.c= new Planta(sketch.round((sketch.width/2)/25+10), sketch.round((sketch.height/2)/25-5), 0, -1, new DNA('c'), sketch.color(200, 0, 255));
+    sketch.corA =sketch.color(255, 196, 71);
+    sketch.corB =sketch.color(200, 0, 255);
+    sketch.corC =sketch.color(0, 200, 255);
+
+
+    sketch.corA =sketch.color(255, 196, 71);
+    sketch.corB =sketch.color(193,209,70);
+    sketch.corC =sketch.color(240,98,105);
+    sketch.a= new Planta(sketch.round(-5), sketch.round(2), 0, -1, new DNA('a'), sketch.corA);
+    sketch.b= new Planta(sketch.round(0), sketch.round(-1), 1, 0, new DNA('b'), sketch.corB);
+    sketch.c= new Planta(sketch.round(5), sketch.round(-3), 0, -1, new DNA('c'), sketch.corC);
 
 
   };
 
 
   sketch.draw= function(){
+
     sketch.clear();
+    sketch.translate(sketch.width*0.5,sketch.height*0.5);
     //sketch.background(255,255,255,0);
     sketch.scale(25, 25);
 
     sketch.a.plant();
-    sketch.a.grow();
+    if (sketch.a.cau.length<13)sketch.a.grow();
     sketch.b.plant();
-    sketch.b.grow();
+    if (sketch.b.cau.length<13)sketch.b.grow();
     sketch.c.plant();
-    sketch.c.grow();
+    if (sketch.c.cau.length<8)sketch.c.grow();
 
 
-    if (sketch.a.cau.length==14) {
+    if (sketch.a.cau.length>=14) {
 
       sketch.noLoop();
     }
 
   };
+
+  sketch.windowResized= function() {
+    sketch.resizeCanvas(window.innerWidth, window.innerHeight);
+  }
 
 };
 
