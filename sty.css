@@ -1,0 +1,62 @@
+* {
+
+  padding: 0;
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  /*text-align:center;*/
+}
+
+img{
+  width:40vw;
+  grid-column: 1 ;
+  grid-row: 2;
+  right: 0;
+}
+
+main{
+
+
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+header{
+
+
+  height: 70px;
+  background-color: #eee;
+}
+
+article {
+
+  grid-column: 2 ;
+  grid-row: 2;
+
+  width:500px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+p{
+  margin-bottom: : 10px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+#titulo{
+  font-family: 'dosis', sans-serif;
+  font-size: 100px;
+
+  grid-column: 1/2 ;
+  grid-row: 1;
+
+
+}
+
+footer{
+  height: 100px;
+
+
+}

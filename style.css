@@ -27,20 +27,138 @@ main {
 }
 
 #box{
-  text-align: center;
+
+
+  margin: auto;
+  top:78vh;
+  position: relative;
+}
+
+.box{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
+position: absolute;
   width: 35px;
   height: 35px;
-opacity:0;
-  margin: auto;
-  top:78vh;
+  opacity:0;
 
 }
 
-#botaoInicial{
+#box0{
+  top: 50vh;
+  left: 50vw;
+  margin-left: -418px;
+  margin-top: 130px;
+
+}
+
+
+
+#label0{
+  left: 50vw;
+top: 50vh;
+margin-left: -370px;
+margin-top: 137px;
+}
+
+
+
+#box1{
+  top: 50vh;
+    left: 50vw;
+    margin-left: 232px;
+    margin-top: 56px;
+}
+
+
+#label1{
+  left: 50vw;
+  top: 50vh;
+  margin-left: 280px;
+  margin-top: 63px;
+}
+
+
+#box2{
+  top: 50vh;
+left: 50vw;
+margin-left: -92px;
+margin-top: 83px;
+}
+
+
+#label2{
+  left: 50vw;
+  top: 50vh;
+  margin-left: -44px;
+  margin-top: 90px;
+}
+
+
+#box3{
+  top: 50vh;
+    left: 50vw;
+    margin-left: 157px;
+    margin-top: -267px;
+}
+
+#label3{
+  left: 50vw;
+  top: 50vh;
+  margin-left: 63px;
+  margin-top: -260px;
+}
+
+
+#box4{
+  top: 50vh;
+    left: 50vw;
+    margin-left: -392px;
+    margin-top: -267px;
+}
+
+#label4{
+  left: 50vw;
+  top: 50vh;
+  margin-left: -489px;
+  margin-top: -260px;
+}
+
+
+#box5{
+  top: 50vh;
+    left: 50vw;
+    margin-left: 309px;
+    margin-top: -20px;
+}
+
+
+#label5{
+  left: 50vw;
+  top: 50vh;
+  margin-left: 357px;
+  margin-top: -13px;
+}
+
+#box6{
+  top: 50vh;
+  left: 50vw;
+  margin-left: 232px;
+  margin-top: 56px;
+}
+
+#label6{
+  left: 50vw;
+  top: 50vh;
+  margin-left: -418px;
+  margin-top: 130px;
+}
+
+
+
+
+.botaoInicial{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -53,7 +171,9 @@ opacity:0;
 
 }
 
-#botaoSombra{
+
+
+.botaoSombra{
 
   position: absolute;
   left: 50%;
@@ -67,9 +187,46 @@ opacity:0;
   border-style: solid;
   border-radius: 50%;
   border-width: 3px;
+  width:32px;
+  height: 32px;
+  transition: border-width 0.3s;
+  opacity: 0.7;
 
 
 
+
+}
+
+.botaoSombra:hover {
+  animation-duration: 0.3s;
+  animation-name: bota;
+  animation-iteration-count: 1;
+
+  border-width: 6px;
+
+
+}
+
+
+
+
+
+@keyframes bota {
+  from {
+
+    width:15px;
+    height: 15px;
+    opacity: 0
+    /*top:78vh;*/
+  }
+
+  to {
+
+    width:32px;
+    height: 32px;
+    opacity: 0.7;
+    /*top:74.2vh;*/
+  }
 }
 
 
@@ -90,6 +247,33 @@ opacity:0;
     /*top:74.2vh;*/
   }
 }
+
+
+.label{
+  position: absolute;
+
+  opacity: 0;
+
+  font-family: 'Work Sans', sans-serif;
+
+}
+
+#label{
+
+  margin-left: 40px;
+  margin-top: 7px;
+
+  left: 50vw;
+  top: 78vh;
+
+
+}
+
+
+
+
+
+
 
 
 /*

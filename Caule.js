@@ -9,7 +9,7 @@ class Caule{
     this.dX = myp5.round( myp5.cos( myp5.acos( this.dirX ) + ( gene * myp5.HALF_PI ) ) );
     this.dY = myp5.round( myp5.sin( myp5.asin( this.dirY ) + ( gene * myp5.HALF_PI ) ) );
 
-    if(myp5.random(10)<4){
+    if(myp5.random(10)<5){
       this.f=true;
     }
 
@@ -42,7 +42,9 @@ class Caule{
     myp5.stroke( this.cor );
     //desenha as flores
     if ( this.f ) {
-      myp5.ellipse( this.x1, this.y2, 0.5, 0.5);
+      if(!((this.x1==-16 && this.y2==6) || (this.x1==-15 && this.y2==-8) || (this.x1==10 && this.y2==3) || (this.x1==13 && this.y2==0) || (this.x1==-3 && this.y2==4) || (this.x1==7 && this.y2==-10))) {
+        myp5.ellipse( this.x1, this.y2, 0.5, 0.5);
+      }
     }
   }
 

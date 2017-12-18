@@ -19,7 +19,7 @@ class Planta {
       this.cau[i].show();
     }
   }
-
+/*
   calcfitness(sec, w){
     let dado =1;
     for (let i = 0; i< sec; i++) {
@@ -37,7 +37,7 @@ class Planta {
 
     if (this.score<0) this.score=0;
 
-  }
+  }*/
 
   get novo(){
     let n = this;
