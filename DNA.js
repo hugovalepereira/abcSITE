@@ -15,7 +15,7 @@ class DNA{
       this.length = 200;
       this.genes = [];
 
-      for ( var i = 0; i < this.length; i++ ) {
+      for (var i = 0; i < this.length; i++ ) {
         this.genes[i]=myp5.round(myp5.random(-1, 1));
       }
     }

@@ -2,12 +2,12 @@ class Planta {
 
   constructor(x, y,  e, f, dna,cor) {
     this.dna = dna;
-    
-    this.rootX= x;
-    this.rootY=y;
+
+    this.rootX = x;
+    this.rootY = y;
     this.cau = [];
-    this.cor=cor;
-    this.cau[0]=new Caule(this.rootX, this.rootY, e, f, this.dna.genes[0],this.cor);
+    this.cor = cor;
+    this.cau [ 0 ] =new Caule(this.rootX, this.rootY, e, f, this.dna.genes[0],this.cor);
   }
 
   grow() {
